@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
-from .models import TodoModel
+from .models import TodoModel # 全部に共通するTodoModelはdb.sqlite3で作った型の名前
 from django.urls import reverse_lazy
 
 # Create your views here.
@@ -8,10 +8,10 @@ from django.urls import reverse_lazy
 class TodoList(ListView):
     template_name = "list.html"
     model = TodoModel
+
 class TodoDetail(DetailView):
     template_name = "detail.html"
     model = TodoModel
-    # success_url = reverse_lazy("list")
 class TodoCreate(CreateView):
     template_name = "create.html"
     model = TodoModel

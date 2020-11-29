@@ -16,6 +16,7 @@ class TodoModel(models.Model):
     duedate = models.DateField()
 
 
+
     def __str__(self):
         return self.title #オブジェクトのtitleをそのまま受ける
 
