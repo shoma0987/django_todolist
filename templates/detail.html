@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block header %}
+<body style="background-color:#CBFFD3">
+<div style="padding:10px">
+<div style="width:10%;background:#75A9FF" class="alert alert-dark" role="alert">Details of todo</div>
+</div>
+{% endblock header %}
+
+{% block content %}
+
+<div style="padding:10px">Title:</div>
+<div style="padding:10px">
+<div style="width:30%" class="alert alert-success" role="alert">
+    {{object.title}}
+</div>
+</div>
+
+<div style="padding:10px">Memo:</div>
+<div style="padding:10px">
+<div style="width:30%" class="alert alert-success" role="alert">
+    {{object.memo}}
+</div>
+</div>
+ <a href="{% url 'list' %}" class="btn btn-info" tabindex="-1" role="button" aria-disabled="true">
+     Back to my list
+ </a>
+
+</body>
+{% endblock content %}

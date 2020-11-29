@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="POST">{% csrf_token %}
+<div style="padding:20"><input style="padding:10px" type="submit" value="Delete"></div>
+<a href="{% url 'list' %}" class="btn btn-info" tabindex="-1" role="button" aria-disabled="true">
+     Back to my list
+ </a>
+</form>
+{% endblock content %}
