@@ -1,1 +1,1 @@
-web:gunicorn django_todolist:app
+web: gunicorn django_todolist : app --log-file -
