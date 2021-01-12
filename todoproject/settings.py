@@ -26,7 +26,7 @@ SECRET_KEY = 'ps!!vb8b*gv0m9+1era4c3o-h=bea%06vx7a$_nn*ok0dg^f0_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'todo-test0987.herokuapp.com/']
 
 
 # Application definition
