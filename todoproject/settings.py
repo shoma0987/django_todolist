@@ -26,7 +26,7 @@ SECRET_KEY = 'ps!!vb8b*gv0m9+1era4c3o-h=bea%06vx7a$_nn*ok0dg^f0_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'todo-test0987.herokuapp.com/']
+ALLOWED_HOSTS = ['todo-test0987.herokuapp.com']
 
 
 # Application definition
@@ -126,4 +126,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
 
