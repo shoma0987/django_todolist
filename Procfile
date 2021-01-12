@@ -1,1 +1,1 @@
-web:gunicorn django_todolist.wsgi
+web:gunicorn django_todolist:app
