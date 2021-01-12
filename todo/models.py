@@ -17,6 +17,7 @@ class TodoModel(models.Model):
 
 
 
+
     def __str__(self):
         return self.title #オブジェクトのtitleをそのまま受ける
 
