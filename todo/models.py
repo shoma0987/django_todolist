@@ -13,10 +13,7 @@ class TodoModel(models.Model):
         choices= CHOICE
 
     )
-    duedate = models.DateField()
-
-
-
+    duedate = models.DateField(null=True)
 
     def __str__(self):
         return self.title #オブジェクトのtitleをそのまま受ける

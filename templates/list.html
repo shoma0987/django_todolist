@@ -2,7 +2,7 @@
 {% block header %}
 <style>
 body {
-  background-color: #CCFFCC;
+  background-color: #FFFFFF;
 }
 </style>
 <div class="jumbotron jumbotron-fluid">
@@ -16,8 +16,10 @@ body {
 
 {% block content %}
 
+    <div class="container">
     <div style="padding-left: 40px">
     <a href="{% url 'create' %}" class="btn btn-info mb-3" tabindex="-1" role="button" aria-disabled="true">New create</a>
+    </div>
     </div>
     {% for item in object_list %}
 

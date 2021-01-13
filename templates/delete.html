@@ -2,9 +2,11 @@
 
 {% block content %}
 <form action="" method="POST">{% csrf_token %}
-<div style="padding:20"><input style="padding:10px" type="submit" value="Delete"></div>
-<a href="{% url 'list' %}" class="btn btn-info" tabindex="-1" role="button" aria-disabled="true">
-     Back to my list
- </a>
+<div style="padding:20px"><input style="padding:10px" type="submit" value="Delete"></div>
+<div style="padding:15px">
+    <a href="{% url 'list' %}" class="btn btn-info" tabindex="-1" role="button" aria-disabled="true">
+         Back to my list
+    </a>
+</div>
 </form>
 {% endblock content %}
