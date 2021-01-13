@@ -1,25 +1,32 @@
 {% extends "base.html" %}
 {% block header %}
+
 <style>
+{% load static %}
 body {
-  background-color: #FFFFFF;
+    background-image: url("{% static 'fort.jpg' %}"); background-size: cover;
 }
 </style>
-<div class="jumbotron jumbotron-fluid">
 
-  <div class="container">
+<div class="jumbotron jumbotron-fluid " style="background-color:#66CC99; padding-left:10%;">
+
+
+<!--<div class="flex-container" style="display:flex;">-->
+<!--    <img src="{% static 'todopic.jpg' %}" alt="My image"/>-->
     <h1 class="display-4">Todo List</h1>
-    <h2 class="lead">Manage your schedule!</h2>
-  </div>
+<!--</div>-->
+    <div class="lead" style="font-size:30px">Manage your schedule!</div>
+
+
 </div>
 {% endblock header %}
 
-{% block content %}
+<body>
 
+
+{% block content %}
     <div class="container">
-        {% load static %}
-         <img src="{% static 'forest.jpg' %}" alt="My image"/>
-    <div style="padding-left: 40px">
+    <div style="padding-left: 30px; ">
     <a href="{% url 'create' %}" class="btn btn-info mb-3" tabindex="-1" role="button" aria-disabled="true">New create</a>
     </div>
     </div>
@@ -33,8 +40,7 @@ body {
         <a href="{% url 'delete' item.pk %}" style="width:120px; background:#CCFFFF; color:#333399" class="btn btn-success" tabindex="-1" role="button" aria-disabled="true">Remove</a>
         <a href="{% url 'detail' item.pk %}" style="width:120px; background:#CCFFFF; color:#333399" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Details</a>
     </div>
-
-    {% endfor %}
     </div>
-
+    {% endfor %}
+</body>
 {% endblock content %}

@@ -3,12 +3,12 @@
 {% block content %}
 <body style="background-color:#FFFFCC">
 <form action="" method="POST">{% csrf_token %}
-    <h1>Update todo if needed</h1>
-    <div style="padding:10px">Title: {{form.title}}</div>
-    <div style="padding:10px">Memo:</div>
-    <div style="padding:10px">{{form.memo}}</div>
-    <div style="padding:10px">Priority: {{form.priority}}</div>
-    <div style="padding:10px">Duedate: {{form.duedate}}</div>
+    <h1>Update</h1>
+    <div style="padding:10px; font-size:25px">Title: {{form.title}}</div>
+    <div style="padding:10px; font-size:25px">Memo:</div>
+    <div style="padding:10px; font-size:25px">{{form.memo}}</div>
+    <div style="padding:10px; font-size:25px">Priority: {{form.priority}}</div>
+    <div style="padding:10px; font-size:25px">Duedate: {{form.duedate}}</div>
 
 <div style="padding:10px"><input type="submit" value="Update" style="color:blue"></div>
 
