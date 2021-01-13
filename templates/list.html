@@ -17,6 +17,8 @@ body {
 {% block content %}
 
     <div class="container">
+        {% load static %}
+         <img src="{% static 'forest.jpg' %}" alt="My image"/>
     <div style="padding-left: 40px">
     <a href="{% url 'create' %}" class="btn btn-info mb-3" tabindex="-1" role="button" aria-disabled="true">New create</a>
     </div>
@@ -25,11 +27,11 @@ body {
 
     <div class="container pt-1">
 
-    <div class="alert alert-{{item.priority}}" role="alert" style="width: 80%">
+    <div class="alert alert-{{item.priority}}" role="alert" style="width:100%">
         <p>{{item.title}}   [Deadline: {{item.duedate | date:"o/n/j"}}] </p>
-        <a href="{% url 'update' item.pk %}" style="width:80px; background:#CCFFFF; color:#333399" class="btn btn-info" tabindex="-1" role="button" aria-disabled="true">Edit</a>
-        <a href="{% url 'delete' item.pk %}" style="width:80px; background:#CCFFFF; color:#333399" class="btn btn-success" tabindex="-1" role="button" aria-disabled="true">Remove</a>
-        <a href="{% url 'detail' item.pk %}" style="width:80px; background:#CCFFFF; color:#333399" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Details</a>
+        <a href="{% url 'update' item.pk %}" style="width:120px; background:#CCFFFF; color:#333399" class="btn btn-info" tabindex="-1" role="button" aria-disabled="true">Edit</a>
+        <a href="{% url 'delete' item.pk %}" style="width:120px; background:#CCFFFF; color:#333399" class="btn btn-success" tabindex="-1" role="button" aria-disabled="true">Remove</a>
+        <a href="{% url 'detail' item.pk %}" style="width:120px; background:#CCFFFF; color:#333399" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Details</a>
     </div>
 
     {% endfor %}
